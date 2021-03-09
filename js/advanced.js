@@ -1,4 +1,4 @@
-const fruit = ['orange', 'pear', 'kiwi', 'melon'];
+const fruit = ["orange", "pear", "kiwi", "melon"];
 // De klassieke manier
 for (let i = 0; i < fruit.length; i++) {
   console.log(fruit[i]);
@@ -14,10 +14,10 @@ fruit.forEach(function (element) {
 // melon
 
 // Hetzelfde maar korter met behulp van arrow functies
-fruit.forEach(element => console.log(element));
+fruit.forEach((element) => console.log(element));
 
 // Idem. Als er maar één parameter is moeten er geen ronde haakjes staan rond de parameter
-fruit.forEach(element => console.log(element));
+fruit.forEach((element) => console.log(element));
 
 // De meest algemene vorm van forEach
 fruit.forEach((item, index, array) => {
@@ -30,33 +30,34 @@ fruit.forEach((item, index, array) => {
 
 // Stel dat we een array van objecten hebben. Hoe kunnen we een object terugvinden
 // dat aan een specifieke voorwaarde voldoet
-const users = [{
+const users = [
+  {
     id: 1,
-    firstname: 'Jan',
-    lastname: 'Janssens'
+    firstname: "Jan",
+    lastname: "Janssens",
   },
   {
     id: 2,
-    firstname: 'Eva',
-    lastname: 'De Smet'
+    firstname: "Eva",
+    lastname: "De Smet",
   },
   {
     id: 3,
-    firstname: 'Pieter',
-    lastname: 'Martens'
-  }
+    firstname: "Pieter",
+    lastname: "Martens",
+  },
 ];
 
-const user = users.find(item => item.id === 1);
+const user = users.find((item) => item.id === 1);
 console.log(user); // {id: 1, firstname: "Jan", lastname: "Janssens"}
 
 // De functie findIndex werkt analoog maar retourneert de index
-const indexuser = users.findIndex(item => item.id === 1);
+const indexuser = users.findIndex((item) => item.id === 1);
 console.log(indexuser); // 0
 
 // De functie find zoekt naar het enige (of eerste) element dat aan de voorwaarde voldoet
 // Als er verschillende objecten aan de voorwaarden voldoen, kan je gebruik maken van filter
-const someusers = users.filter(item => item.id < 3);
+const someusers = users.filter((item) => item.id < 3);
 console.log(someusers);
 // 0: {id: 1, firstname: "Jan", lastname: "Janssens"}
 // 1: {id: 2, firstname: "Eva", lastname: "De Smet"}
@@ -100,26 +101,38 @@ console.log(fruit); //  ["melon", "orange", "blueberry", "pineapple", "strawber
 
 // Oefening
 // Sorteer de array animals op basis van gewicht: van lichter naar zwaarder
-const animals = [{
-    name: 'lion',
-    size: 'medium',
-    weight: 150
+const animals = [
+  {
+    name: "lion",
+    size: "medium",
+    weight: 150,
   },
   {
-    name: 'dog',
-    size: 'small',
-    weight: 10
+    name: "dog",
+    size: "small",
+    weight: 10,
   },
   {
-    name: 'elephant',
-    size: 'big',
-    weight: 5000
+    name: "elephant",
+    size: "big",
+    weight: 5000,
   },
   {
-    name: 'cat',
-    size: 'small',
-    weight: 5
-  }
+    name: "cat",
+    size: "small",
+    weight: 5,
+  },
 ];
 
-animals.sort((animal1, animal2) => animal1.weight - animal2.weight);
+console.log(animals);
+
+// Oefening
+// Sorteer de onderstaande array op het aantal zijden
+let shapes = [
+  [5, "Pentagon"],
+  [3, "Triangle"],
+  [8, "Octagon"],
+  [4, "Rectangle"],
+];
+
+console.log(shapes);
