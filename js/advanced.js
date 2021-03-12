@@ -1,7 +1,7 @@
 const fruit = ["orange", "pear", "kiwi", "melon"];
 // De klassieke manier
-for (let i = 0; i < fruit.length; i++) {
-  console.log(fruit[i]);
+for (const f of fruit) {
+  console.log(f);
 }
 
 // Nog een manier met behulp van forEach
@@ -17,7 +17,7 @@ fruit.forEach(function (element) {
 fruit.forEach((element) => console.log(element));
 
 // Idem. Als er maar één parameter is moeten er geen ronde haakjes staan rond de parameter
-fruit.forEach((element) => console.log(element));
+fruit.forEach(element => console.log(element));
 
 // De meest algemene vorm van forEach
 fruit.forEach((item, index, array) => {
@@ -48,11 +48,11 @@ const users = [
   },
 ];
 
-const user = users.find((item) => item.id === 1);
+const user = users.find(item => item.id === 1);
 console.log(user); // {id: 1, firstname: "Jan", lastname: "Janssens"}
 
 // De functie findIndex werkt analoog maar retourneert de index
-const indexuser = users.findIndex((item) => item.id === 1);
+const indexuser = users.findIndex(item => item.id === 1);
 console.log(indexuser); // 0
 
 // De functie find zoekt naar het enige (of eerste) element dat aan de voorwaarde voldoet
@@ -98,6 +98,11 @@ console.log(fruit); //  ["melon", "orange", "blueberry", "pineapple", "strawber
 // a.length < b.length => a.length - b.length < 0 --> een negatief getal betekent dat a kleiner is dan b
 fruit.sort((a, b) => a.length - b.length);
 console.log(fruit); //  ["melon", "orange", "blueberry", "pineapple", "strawberry"]
+
+// Oefening
+// Schrijf een functie die controleert of een woord een permutatie is van een ander woord, bijvoorbeeld SLAAPT en PLAATS
+
+
 
 // Oefening
 // Sorteer de array animals op basis van gewicht: van lichter naar zwaarder

@@ -1,9 +1,9 @@
 // Een lege array creëren
-let leeg1 = new Array();
-let leeg2 = [];
+const leeg1 = new Array();
+const leeg2 = [];
 
 // Initiële elementen opgeven
-let fruit = ["apple", "pear", "lemon"];
+const fruit = ["apple", "pear", "lemon"];
 
 // Individuele elementen gebruiken
 console.log(fruit[1]); // pear
@@ -21,7 +21,7 @@ console.log(fruit.length); // 4
 console.log(fruit); // ["apple", "pear", "kiwi", "grape"]
 
 // Een array kan elementen van verschillende types bijhouden
-let arr = [
+const arr = [
   "apple",
   {
     firstname: "Jan",
@@ -115,62 +115,20 @@ fruit.reverse();
 console.log(fruit); // ["strawberry", "pineapple", "blueberry", "orange", "melon"]
 
 // De functie split splitst de meegegeven string op in stukken op basis van het opgegeven scheidingsteken
-let namen = "Bilbo, Gandalf, Nazgul";
-let arrNamen1 = namen.split(",");
+const namen = "Bilbo, Gandalf, Nazgul";
+const arrNamen1 = namen.split(",");
 console.log(arrNamen1); // ["Bilbo", " Gandalf", " Nazgul"]
 
 // De split methode heeft een optioneel tweede argument, namelijk de maximumlengte van de array
 // Als dit tweede argument opgegeven wordt, worden alle extra elementen genegeerd;
-let arrNamen2 = namen.split(",", 2);
+const arrNamen2 = namen.split(",", 2);
 console.log(arrNamen2); // ["Bilbo", " Gandalf"]
 
-let str = "test";
+const str = "test";
 console.log(str.split("")); // ["t", "e", "s", "t"]
 
 // De functie join is de omgekeerde bewerking. De functie join creëert een join waarbij
 // de items gescheiden worden door het opgegeven scheidingsteken
-let arrNamen3 = ["Bilbo", "Gandalf", "Nazgul"];
-let strNamen3 = arrNamen3.join(";");
+const arrNamen3 = ["Bilbo", "Gandalf", "Nazgul"];
+const strNamen3 = arrNamen3.join(";");
 console.log(strNamen3); // Bilbo;Gandalf;Nazgul
-
-// Oefening
-// Sorteer de array animals op basis van gewicht: van lichter naar zwaarder
-const animals = [
-  {
-    name: "lion",
-    size: "medium",
-    weight: 150,
-  },
-  {
-    name: "dog",
-    size: "small",
-    weight: 10,
-  },
-  {
-    name: "elephant",
-    size: "big",
-    weight: 5000,
-  },
-  {
-    name: "cat",
-    size: "small",
-    weight: 5,
-  },
-];
-
-console.log(animals);
-
-// Oefening
-// Sorteer de onderstaande array op het aantal zijden
-let shapes = [
-  [5, "Pentagon"],
-  [3, "Triangle"],
-  [8, "Octagon"],
-  [4, "Rectangle"],
-];
-
-// Oefening
-// Schrijf een functie die controleert of een woord een permutatie is van een ander woord, bijvoorbeeld SLAAPT en PLAATS
-
-function isPermutatie(woord1, woord2) {}
-console.log(isPermutatie("SLAAPT", "PLAATS"));

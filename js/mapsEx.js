@@ -19,7 +19,7 @@
 // Gebruik nl_en_dict om woorden te vertalen van NL naar EN
 // Indien een woord niet in het woordenboek voorkomt geef je een gepaste melding
 // Vul onderstaande code aan
-alert('Vertalen van NL naar EN');
+console.log('Vertalen van NL naar EN');
 let word = prompt('Geef een nederlands woord');
 while (word) {
     // hier aanvullen
@@ -29,7 +29,7 @@ while (word) {
 // Gebruik beide woordenboeken om woorden te vertalen van NL naar EN
 // Indien een woord niet in het woordenboek voorkomt geef je een gepaste melding
 // Vul onderstaande code aan
-alert('Vertalen van NL naar FR');
+console.log('Vertalen van NL naar FR');
 word = prompt('Geef een nederlands woord');
 while (word) {
     // hier aanvullen

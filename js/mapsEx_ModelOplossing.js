@@ -29,25 +29,25 @@ const en_fr_dict = new Map([
 
 // Gebruik nl_en_dict om woorden te vertalen van NL naar EN
 // Vul onderstaande code aan
-alert('Vertalen van NL naar EN');
+console.log('Vertalen van NL naar EN');
 let word = prompt('Geef een nederlands woord');
 while (word) {
     if (nl_en_dict.has(word))
-        alert(`NL: ${word} - EN: ${nl_en_dict.get(word)}`);
+        console.log(`NL: ${word} - EN: ${nl_en_dict.get(word)}`);
     else
-        alert(`${word} staat niet in het woordenboek`);
+        console.log(`${word} staat niet in het woordenboek`);
     word = prompt('Geef een nederlands woord');
 }
 
 // Gebruik beide woordenboeken om woorden te vertalen van NL naar EN
 // Vul onderstaande code aan
-alert('Vertalen van NL naar FR');
+console.log('Vertalen van NL naar FR');
 word = prompt('Geef een nederlands woord');
 while (word) {
     if (nl_en_dict.has(word))
-        alert(`NL: ${word} - FR: ${en_fr_dict.get(nl_en_dict.get(word))}`);
+        console.log(`NL: ${word} - FR: ${en_fr_dict.get(nl_en_dict.get(word))}`);
     else
-        alert(`${word} staat niet in het woordenboek`);
+        console.log(`${word} staat niet in het woordenboek`);
     word = prompt('Geef een nederlands woord');
 }
 
