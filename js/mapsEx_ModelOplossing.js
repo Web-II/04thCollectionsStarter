@@ -106,7 +106,7 @@ for (const [woord, aantal] of woordenMap) {
 /*
 Er staan n personen in een cirkel te wachten op hun executie. 
 De personen worden in wijzerzin genummerd van 1 tot en met n. 
-Het aftellen begint vanaf persoon 1, waarbij elke k-de nog levende persoon wordt ge�xecuteerd. 
+Het aftellen begint vanaf persoon 1, waarbij elke k-de nog levende persoon wordt geëxecuteerd. 
 De cirkel wordt hierbij in wijzerzin doorlopen en wordt steeds kleiner en kleiner 
 naarmate er meer personen geexecuteerd worden. 
 De laatste persoon die overblijft, wordt in leven gelaten. 
@@ -118,7 +118,7 @@ Schrijf een functie die twee parameters heeft
 - de stapgrootte, k
 en die de plaats van de laatst ovelevende persoon retourneert.
 
-Voor 30 personen en stagrootte 9 zou je plaats 21 moeten uitkomen...
+Voor 30 personen en stapgrootte 9 zou je plaats 21 moeten uitkomen...
 */
 
 function josephus(n, k) {
@@ -127,7 +127,7 @@ function josephus(n, k) {
         map.set(i, true);
     }
     let aantalLevenden = n;
-    let index = -1;
+    let index = 0;
     while (aantalLevenden > 1) {
         let aantal = 0;
         while (aantal < k) {
@@ -143,4 +143,4 @@ function josephus(n, k) {
 
 const aantalPersonen = 30;
 const stapGrootte = 9;
-console.log(`In een cirkel met ${aantalPersonen} personen en stagrootte ${stapGrootte} sta je best op plaats ${josephus(aantalPersonen, stapGrootte)}`);
+console.log(`In een cirkel met ${aantalPersonen} personen en stapgrootte ${stapGrootte} sta je best op plaats ${josephus(aantalPersonen, stapGrootte)}`);

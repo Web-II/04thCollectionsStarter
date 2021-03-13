@@ -1,6 +1,5 @@
-const label = document.getElementById("label");
-const myInput = document.getElementById("input");
-const go = document.getElementById("go");
+let label, myInput, go; 
+let voorbeeld = null;
 
 const viewers = new Set([
   "patrick.lauwaerts@hogent.be",
@@ -17,7 +16,7 @@ console.log(viewers);
 
 // voorbeeld 1: add method
 console.log(`Use add-method to add a unique value to the set`);
-function voorbeeld() {
+voorbeeld = function() {
   label.innerText = 'Add a viewer for this video: ';
   go.onclick = function () {
     const viewer = myInput.value;
@@ -31,7 +30,7 @@ function voorbeeld() {
 // console.log(
 //   `Use has-method to check if an entry for the given key is present in the set.`
 // );
-// function voorbeeld() {
+// voorbeeld = function() {
 //   label.innerText = "Who do you want to follow up? ";
 //   go.onclick = function () {
 //     const viewer = myInput.value;
@@ -43,7 +42,7 @@ function voorbeeld() {
 // console.log(
 //   `Use delete-method to delete an entry with a given key from the set`
 // );
-// function voorbeeld() {
+// voorbeeld = function() {
 //   label.innerText = "Who do you want to remove from the set of viewers? ";
 //   go.onclick = function () {
 //     const viewer = myInput.value;
@@ -122,4 +121,9 @@ function voorbeeld() {
 // Oefening 2
 // Bepaal 3 *verschillende* random getallen tussen 1 en 6
 
-window.onload = voorbeeld;
+window.onload = function(){
+  label = document.getElementById("label");
+  myInput = document.getElementById("input");
+  go = document.getElementById("go");
+  voorbeeld();
+};

@@ -1,7 +1,5 @@
-// Om de eerste 3 voorbeelden uit te voeren, copieer de code tussen /* ... */ in de function voorbeeld();
-const label = document.getElementById("label");
-const myInput = document.getElementById("input");
-const go = document.getElementById("go");
+let label, myInput, go; 
+let voorbeeld = null;
 
 const population = new Map();
 population.set("Belgium", 11589623);
@@ -10,7 +8,7 @@ population.set("Burkina-Faso", 20903275);
 
 //voorbeeld 1: get method
 console.log(`Use get-method to retrieve a value for a given key`);
-function voorbeeld() {
+voorbeeld = function() {
   label.innerText = "Enter name of country: ";
   go.onclick = function () {
     const country = myInput.value;
@@ -24,7 +22,7 @@ function voorbeeld() {
 // console.log(
 //   `Use has-method to check if an entry for the given key is present in the map.`
 // );
-// function voorbeeld() {
+// voorbeeld = function() {
 //   label.innerText = "Enter name of country: ";
 //   go.onclick = function () {
 //     const country = myInput.value;
@@ -38,7 +36,7 @@ function voorbeeld() {
 // console.log(
 //   `Use delete-method to delete an entry with a given key from the map`
 // );
-// function voorbeeld() {
+// voorbeeld = function() {
 //   label.innerText = "Enter name of country to delete:";
 //   go.onclick = function () {
 //     const country = myInput.value;
@@ -177,4 +175,9 @@ function voorbeeld() {
 // console.log('comparison 4: ' + (object1 === object3));
 // console.log(`Object1: ${object1} - Object3: ${object3}`);
 
-window.onload = voorbeeld;
+window.onload = function(){
+  label = document.getElementById("label");
+  myInput = document.getElementById("input");
+  go = document.getElementById("go");
+  voorbeeld();
+};
