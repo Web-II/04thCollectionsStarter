@@ -89,13 +89,16 @@ console.log(`en_fr dictionary bevat ${geefZelfdeWoorden(en_fr_dict)} identieke w
 
 const tekst = "De wet van Zipf is oorspronkelijk de door George Kingsley Zipf geconstateerde en naar hem genoemde wetmatigheid in de taalkunde dat in natuurlijke taal de frequentie van voorkomen van een woord ruwweg dalend exponentieel is met de rang van het woord in de frequentietabel en wel zo dat het meest frequente woord ongeveer twee keer zo vaak voorkomt als het op een na frequentste woord dat weer twee keer zo vaak als het derde frequentste enzovoort";
 
-const woordenMap = new Map();
+let woordenMap = new Map();
 for (const w of tekst.toUpperCase().split(' ')) {
     if (woordenMap.has(w))
         woordenMap.set(w, woordenMap.get(w) + 1)
     else
         woordenMap.set(w, 1);
 }
+//sorteren op aantal
+woordenMap = new Map([...woordenMap.entries()].sort((a,b)=>b[1]-a[1]))
+
 for (const [woord, aantal] of woordenMap) {
     console.log(`${woord} komt ${aantal} keer voor.`)
 }
