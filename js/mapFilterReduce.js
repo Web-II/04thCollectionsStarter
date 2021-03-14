@@ -51,16 +51,12 @@ const animals = [
 // console.log(animal_names_1); // ["cat", "dog", "lion", "elephant"]
 
 // // map
-// const animal_names_2 = animals.map((value, index, array) => {
-//   return value.name;
-// });
+// const animal_names_2 = animals.map((value, index, array) => value.name);
 // console.log(animal_names_2); // ["cat", "dog", "lion", "elephant"]
 
 // // omdat er geen gebruik gemaakt wordt van index en array
 // // had je dit ook als volgt kunnen schrijven
-// const animal_names_3 = animals.map(value => {
-//   return value.name;
-// });
+// const animal_names_3 = animals.map(value => value.name);
 // console.log(animal_names_3); // ["cat", "dog", "lion", "elephant"]
 
 // // Voorbeeld 2: We willen een array met de kleine dieren
@@ -74,16 +70,12 @@ const animals = [
 // console.log(small_animals_1); // [{name: "cat", size: "small", weight: 5}, {name: "dog", size: "small", weight: 10}]
 
 // // filter
-// const small_animals_2 = animals.filter((value, index, array) => 
-//   value.size === 'small';
-// );
+// const small_animals_2 = animals.filter((value, index, array) => value.size === 'small');
 // console.log(small_animals_2); // [{name: "cat", size: "small", weight: 5}, {name: "dog", size: "small", weight: 10}]
 
 // // omdat er geen gebruik gemaakt wordt van index en array
 // // had je dit ook als volgt kunnen schrijven
-// const small_animals_3 = animals.filter(value => 
-//   value.size === 'small';
-// );
+// const small_animals_3 = animals.filter(value =>value.size === 'small');
 // console.log(small_animals_3); // [{name: "cat", size: "small", weight: 5}, {name: "dog", size: "small", weight: 10}]
 
 // // Voorbeeld 3: We willen de totale som van de gewichten van de dieren kennen
