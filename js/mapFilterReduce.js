@@ -80,7 +80,7 @@ const animals = [
 
 // // Voorbeeld 3: We willen de totale som van de gewichten van de dieren kennen
 // // for - lus
-// const total_weight_1 = 0;
+// let total_weight_1 = 0;
 // for (const a of animals) {
 //   total_weight_1 += a.weight;
 // }
